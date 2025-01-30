@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2d3748;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #f9fafb;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .remember-label {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .forgot-password {
+            font-size: 14px;
+            color: #3182ce;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #2b6cb0;
+        }
+
+        .signup-text {
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .signup-link {
+            color: #3182ce;
+            text-decoration: none;
+        }
+
+        .signup-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h1 class="title">Log in</h1>
+            <form action="#" method="post">
+                <div>
+                    <label for="email">Your email</label>
+                    <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+                <div class="checkbox-container">
+                    <div>
+                        <input type="checkbox" id="remember" aria-describedby="remember">
+                        <label for="remember" class="remember-label">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="login-btn">Log in</button>
+                <p class="signup-text">Don't have an account yet? <a href="{% url 'signup' %}" class="signup-link">Sign up</a></p>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
